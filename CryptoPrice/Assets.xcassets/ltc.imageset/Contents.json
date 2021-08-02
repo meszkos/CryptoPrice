@@ -1,6 +1,7 @@
 {
-  "colors" : [
+  "images" : [
     {
+      "filename" : "ltc@2x.png",
       "idiom" : "universal"
     }
   ],
