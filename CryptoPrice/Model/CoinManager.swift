@@ -21,7 +21,7 @@ struct CoinManager{
     let apiKey = "CBDD22EF-8FEF-41B7-906A-F30C83773197"
     
     let currencyArray=["BRL","CAD","CNY","EUR","GBP","INR","JPY","MXN","NOK",
-                        "PLN","RUB","SEK","USD","BTC","ETH"]
+                        "PLN","RUB","SEK","USD"]
     
     let cryptoArray=["BTC","ETH","BNB","ADA","DOGE","LINK","LTC"]
     
