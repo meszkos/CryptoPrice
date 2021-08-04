@@ -6,7 +6,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -36,25 +35,25 @@
                                         <color key="textColor" name="Tint Color Set"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J0R-tD-Hbo">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J0R-tD-Hbo" userLabel="CoinView">
                                         <rect key="frame" x="10" y="85" width="408" height="80"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="54" translatesAutoresizingMaskIntoConstraints="NO" id="Qul-sg-mmy">
                                                 <rect key="frame" x="10" y="0.0" width="388" height="80"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BTC" translatesAutoresizingMaskIntoConstraints="NO" id="hNY-MA-cfW">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BTC" translatesAutoresizingMaskIntoConstraints="NO" id="hNY-MA-cfW" userLabel="CurrencyImage">
                                                         <rect key="frame" x="0.0" y="8" width="80" height="64"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="80" id="utp-Oi-o7h"/>
                                                         </constraints>
                                                     </imageView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="..." textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f2K-rv-9Gh">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="..." textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f2K-rv-9Gh" userLabel="PriceLabel">
                                                         <rect key="frame" x="134" y="25" width="149" height="30"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                         <color key="textColor" name="Tint Color Set"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AUD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G8f-KU-GKV">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AUD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G8f-KU-GKV" userLabel="CurrencyLabel">
                                                         <rect key="frame" x="337" y="25" width="51" height="30"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                         <color key="textColor" name="Tint Color Set"/>
@@ -66,7 +65,7 @@
                                                 </constraints>
                                             </stackView>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" name="Background Color Set"/>
                                         <constraints>
                                             <constraint firstItem="Qul-sg-mmy" firstAttribute="top" secondItem="J0R-tD-Hbo" secondAttribute="top" id="1u9-wA-I8K"/>
                                             <constraint firstAttribute="trailing" secondItem="Qul-sg-mmy" secondAttribute="trailing" constant="10" id="BxY-cA-eoP"/>
@@ -95,6 +94,12 @@
                             <constraint firstItem="HDg-Y6-rfz" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="xDs-0K-3eh"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="cryptoImage" destination="hNY-MA-cfW" id="alv-Aa-ihw"/>
+                        <outlet property="currencyLabel" destination="G8f-KU-GKV" id="4d9-7C-u4a"/>
+                        <outlet property="pickerView" destination="HDg-Y6-rfz" id="32h-f2-6yu"/>
+                        <outlet property="priceLabel" destination="f2K-rv-9Gh" id="e5j-qd-hwQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -109,8 +114,5 @@
         <namedColor name="Tint Color Set">
             <color red="0.13699999451637268" green="0.21600000560283661" blue="0.30199998617172241" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>
