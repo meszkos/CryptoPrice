@@ -28,7 +28,7 @@ class ViewController: UIViewController {
 
 }
 
-//MARK:- PickerView Methods
+//MARK: - PickerView Methods
 
 extension ViewController:UIPickerViewDelegate,UIPickerViewDataSource{
     
@@ -71,7 +71,7 @@ extension ViewController:UIPickerViewDelegate,UIPickerViewDataSource{
     
     
 }
-//MARK:- CoinManager Methods
+//MARK: - CoinManager Methods
 
 extension ViewController:CoinManagerDelegate{
     
